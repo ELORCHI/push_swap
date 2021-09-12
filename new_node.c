@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   new_node.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/12 06:20:53 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/12 07:55:33 by eel-orch         ###   ########.fr       */
+/*   Created: 2021/09/12 07:48:31 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/09/12 07:53:01 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-int main()
+t_stack *new_node(int data)
 {
-	t_stack *stack;
+	t_stack *new;
 
-	stack = NULL;
-	//push(&stack, 4);
-	//push(&stack, -4);
-	//push(&stack, 445454);
-	//add_back(&stack, new_node(55));
-	//display_stack(stack);
-	pop(&stack);
-	//ft_putstr("======\n");
-	//display_stack(stack);
+	new = (t_stack *)malloc(sizeof(t_stack));
+	new->data = data;
+	new->next = NULL;
+	return (new);
 }

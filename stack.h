@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 05:58:38 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/12 07:27:47 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/12 07:51:27 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ typedef struct	s_stack
 }				t_stack;
 
 
-void push(t_stack **stack, int data);
-void display_stack(t_stack *stack);
-void ft_putstr(char *str);
-void ft_putnbr_fd(int n, int fd);
-void pop(t_stack **stack);
+void 	push(t_stack **stack, int data);
+void 	display_stack(t_stack *stack);
+void 	ft_putstr(char *str);
+void 	ft_putnbr_fd(int n, int fd);
+void 	pop(t_stack **stack);
+void 	add_back(t_stack **stack, t_stack *new);
+t_stack	*new_node(int data);
 #endif
