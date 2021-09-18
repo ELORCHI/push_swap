@@ -17,12 +17,12 @@ int main()
 	t_stack *stack;
 
 	stack = NULL;
-	//push(&stack, 4);
-	//push(&stack, -4);
-	//push(&stack, 445454);
-	//add_back(&stack, new_node(55));
-	//display_stack(stack);
-	pop(&stack);
-	//ft_putstr("======\n");
-	//display_stack(stack);
+	push(&stack, 4);
+	push(&stack, -4);
+	push(&stack, 445454);
+	// add_back(&stack, new_node(55));
+	display_stack(stack);
+	pop_back(&stack);
+	ft_putstr("\n======\n");
+	display_stack(stack);
 }

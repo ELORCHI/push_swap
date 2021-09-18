@@ -30,5 +30,6 @@ void 	ft_putstr(char *str);
 void 	ft_putnbr_fd(int n, int fd);
 void 	pop(t_stack **stack);
 void 	add_back(t_stack **stack, t_stack *new);
+void 	pop_back(t_stack **stack);
 t_stack	*new_node(int data);
 #endif
