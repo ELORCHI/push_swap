@@ -17,6 +17,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#define STACK_A 0
+#define STACK_B 1
+
 typedef struct	s_stack
 {
 	int				data;
@@ -31,5 +34,6 @@ void 	ft_putnbr_fd(int n, int fd);
 void 	pop(t_stack **stack);
 void 	add_back(t_stack **stack, t_stack *new);
 void 	pop_back(t_stack **stack);
+int		stack_len(t_stack *stack);
 t_stack	*new_node(int data);
 #endif

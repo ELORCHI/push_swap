@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "stack.h"
+#include "operations.h"
 
 int main()
 {
@@ -22,7 +23,8 @@ int main()
 	push(&stack, 445454);
 	// add_back(&stack, new_node(55));
 	display_stack(stack);
-	pop_back(&stack);
+	// pop_back(&stack);
+	swap(&stack, STACK_A);
 	ft_putstr("\n======\n");
 	display_stack(stack);
 }
