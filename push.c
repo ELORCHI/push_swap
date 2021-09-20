@@ -12,14 +12,10 @@
 
 #include "stack.h"
 
-void push(t_stack **stack, int data)
+void push(t_stack **stack, t_stack *new)
 {
 	t_stack *new;
-
-	new = (t_stack *)malloc(sizeof(t_stack));
-	if (new == NULL)
-		exit(EXIT_FAILURE);
-	new->data = data;
+	
 	new->next = *stack;
 	*stack = new;	
 }

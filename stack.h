@@ -27,7 +27,7 @@ typedef struct	s_stack
 }				t_stack;
 
 
-void 	push(t_stack **stack, int data);
+void 	push(t_stack **stack, t_stack *new);
 void 	display_stack(t_stack *stack);
 void 	ft_putstr(char *str);
 void 	ft_putnbr_fd(int n, int fd);
