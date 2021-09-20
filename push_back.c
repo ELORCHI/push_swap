@@ -12,7 +12,7 @@
 
 #include "stack.h"
 
-void add_back(t_stack **stack, t_stack *new)
+void push_back(t_stack **stack, t_stack *new)
 {
 	t_stack *tmp;
 

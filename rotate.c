@@ -6,13 +6,10 @@ void rotate(t_stack **stack, int id)
 	t_stack *head;
 
 	head = copy_node(*stack);
-	last = last_node(*stack);
-	pop_back(stack);
-	add_back(stack, head);
 	pop(stack);
-	push(stack, last);
+	push_back(stack, last);
 	if (id = STACK_A)
 		ft_putstr("ra\n");
 	else if (id = STACK_B)
-		ft_putstr("rb\n")
+		ft_putstr("rb\n");
 }

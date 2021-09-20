@@ -32,9 +32,10 @@ void 	display_stack(t_stack *stack);
 void 	ft_putstr(char *str);
 void 	ft_putnbr_fd(int n, int fd);
 void 	pop(t_stack **stack);
-void 	add_back(t_stack **stack, t_stack *new);
+void	push_back(t_stack **stack, t_stack *new);
 void 	pop_back(t_stack **stack);
 int		stack_len(t_stack *stack);
+t_stack *last_node(t_stack *stack);
 t_stack *copy_node(t_stack *srcs);
 t_stack	*new_node(int data);
 #endif

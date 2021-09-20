@@ -14,8 +14,6 @@
 
 void push(t_stack **stack, t_stack *new)
 {
-	t_stack *new;
-	
 	new->next = *stack;
 	*stack = new;	
 }
