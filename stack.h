@@ -19,7 +19,7 @@
 
 #define STACK_A 0
 #define STACK_B 1
-
+#define STACK_A_B 2
 typedef struct	s_stack
 {
 	int				data;
@@ -35,5 +35,6 @@ void 	pop(t_stack **stack);
 void 	add_back(t_stack **stack, t_stack *new);
 void 	pop_back(t_stack **stack);
 int		stack_len(t_stack *stack);
+t_stack *copy_node(t_stack *srcs);
 t_stack	*new_node(int data);
 #endif

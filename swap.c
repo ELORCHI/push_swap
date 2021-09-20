@@ -8,9 +8,8 @@ void swap(t_stack **stack, int id)
 		return ;
 	if (id == STACK_A)
 		ft_putstr("sa");
-	else
+	else if (id == STACK_B)
 		ft_putstr("sb");
-
 	tmp = *stack;
 	*stack = (*stack)->next;
 	(*stack)->next = tmp;
