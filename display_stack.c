@@ -12,10 +12,14 @@
 
 #include "stack.h"
 
-void display_stack(t_stack *stack)
+void display_stack(t_stack *stack, int id)
 {
 	t_stack *tmp;
 
+	if (id == STACK_A)
+		ft_putstr("\n===== STACK_A =====\n");
+	else
+		ft_putstr("\n===== STACK_B =====\n");
 	tmp = stack;
 	if (tmp)
 		while (tmp)

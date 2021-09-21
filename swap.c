@@ -2,15 +2,17 @@
 
 void swap(t_stack **stack, int id)
 {
-	t_stack *tmp;
+	int tmp;
 
+	if (stack == NULL || *stack == NULL)
+		return ;
 	if (stack_len(*stack) < 2)
 		return ;
 	if (id == STACK_A)
 		ft_putstr("sa");
 	else if (id == STACK_B)
 		ft_putstr("sb");
-	tmp = *stack;
-	*stack = (*stack)->next;
-	(*stack)->next = tmp;
+	tmp = (*stack)->data;
+	(*stack)->data = (*stack)->next->data;
+	(*stack)->next->data = tmp;
 }

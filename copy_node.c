@@ -10,4 +10,5 @@ t_stack *copy_node(t_stack *srcs)
 		copy->next = NULL;
 		copy->data = srcs->data;
 	}
+	return (copy);
 }

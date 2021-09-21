@@ -5,7 +5,7 @@ void pop_back(t_stack **stack)
 	t_stack *tmp;
 	t_stack	*to_free;
 
-	if (*stack == NULL)
+	if (stack == NULL || *stack == NULL)
 		return ;
 	if ((*stack)->next == NULL)
 	{

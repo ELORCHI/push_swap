@@ -16,12 +16,14 @@ void push_back(t_stack **stack, t_stack *new)
 {
 	t_stack *tmp;
 
-	tmp = *stack;
+	if (stack == NULL)
+		return ;
 	if (*stack == NULL)
 	{
 		*stack = new;
 		return ;
 	}
+	tmp = *stack;
 	while (tmp->next)
 		tmp = tmp->next;
 	tmp->next = new;

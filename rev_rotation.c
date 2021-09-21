@@ -10,6 +10,6 @@ void rev_rotation(t_stack **a, t_stack **b, int id)
 	{
 		rrotate(a, STACK_A_B);
 		rrotate(b, STACK_A_B);
-		ft_putstr("rrr");
+		ft_putstr("rrr\n");
 	}
 }

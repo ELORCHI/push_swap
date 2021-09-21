@@ -16,11 +16,8 @@ void pop(t_stack **stack)
 {
 	t_stack	*tmp;
 
-	if (!(*stack))
-	{
-		ft_putstr("stack is empty\n");
+	if (stack == NULL || *stack ==  NULL)
 		return ;
-	}
 	tmp = *stack;
 	*stack = (*stack)->next;
 	free(tmp);
