@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rotate.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/22 11:45:44 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/09/22 12:15:42 by eel-orch         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "operations.h"
 
 void rotate(t_stack **stack, int id)
@@ -13,14 +25,3 @@ void rotate(t_stack **stack, int id)
 		ft_putstr("rb\n");
 }
 
-// int main()
-// {
-// 	t_stack *stack;
-
-// 	stack = new_node(2);
-// 	push(&stack, new_node(1));
-// 	push(&stack , new_node(0));
-// 	display_stack(stack, STACK_A);
-// 	rrotate(&stack, STACK_A);
-// 	display_stack(stack, STACK_A);
-// }
