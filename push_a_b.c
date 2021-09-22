@@ -1,25 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations.h                                       :+:      :+:    :+:   */
+/*   push_a_b.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 12:50:00 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/22 12:53:05 by eel-orch         ###   ########.fr       */
+/*   Created: 2021/09/22 12:18:36 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/09/22 12:52:38 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OPERATIONS_H
-# define OPERATIONS_H
+#include "operations.h"
 
-#include "stack.h"
-#include <string.h>
+void push_a_b(t_stack **a, t_stack **b, int id)
+{
+	t_stack **from;
+	t_stack **to;
+	t_stack *tmp;
+	char 	*str;
 
-void swap(t_stack **stack, int id);
-void rotate(t_stack **stack, int id);
-void rotation(t_stack **a, t_stack **b, int id);
-void rrotate(t_stack **stack, int id);
-void rev_rotation(t_stack **a, t_stack **b, int id);
-void push_a_b(t_stack **a, t_stack **b, int id);
-#endif
+	if (id == STACK_A)
+	{
+		from = a;
+		to = b;
+		str = strdup("pb");
+	}
+	else
+	{
+		from = b;
+		to = a;
+		str = strdup("pa");
+	}
+	if (*from == NULL)
+		return ;
+	tmp = copy_node(*from);
+	pop(from);
+	push(to, tmp);
+	ft_putstr(str);
+	free(str);
+}
