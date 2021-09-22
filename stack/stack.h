@@ -6,23 +6,25 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 05:58:38 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/12 07:51:27 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/22 14:22:18 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STUCK_H
-# define STUCK_H
+#ifndef STACK_H
+# define STACK_H
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdio.h>
 
-#define STACK_A 0
-#define STACK_B 1
-#define STACK_A_B 2
+# define STACK_A 0
+# define STACK_B 1
+# define STACK_A_B 2
+
 typedef struct	s_stack
 {
 	int				data;
+	int				index;
 	struct s_stack	*next;
 }				t_stack;
 
