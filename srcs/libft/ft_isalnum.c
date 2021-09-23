@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_params_errors.c                              :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 14:25:26 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/22 14:27:18 by eel-orch         ###   ########.fr       */
+/*   Created: 2019/10/12 12:14:00 by eel-orch          #+#    #+#             */
+/*   Updated: 2019/10/27 16:13:04 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "srcs"
-
-
-//is integer
-//no duplicates
-
-int check_params_errors(int argc, char **str)
+int	ft_isalnum(int c)
 {
-		int index;
-
-		index = 0;
-		while (str[i])
-		{
-
-		}
+	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z')
+		|| (c >= 'a' && c <= 'z'))
+		return (1);
+	else
+		return (0);
 }

@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/12 06:41:51 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/12 07:18:20 by eel-orch         ###   ########.fr       */
+/*   Created: 2019/10/13 15:49:47 by eel-orch          #+#    #+#             */
+/*   Updated: 2019/11/08 17:02:18 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <string.h>
+#include "libft.h"
 
-void ft_putstr(char *str)
+void	ft_bzero(void *s, size_t n)
 {
-	int i;
+	size_t	i;
+	char	*ptr;
 
-	if (!str)
-		return ;
 	i = 0;
-	while (*(str + i))
-	{
-		write(1, str + i, 1);
-		i++;
-	}
+	ptr = (char *)s;
+	while (n--)
+		ptr[i++] = 0;
 }

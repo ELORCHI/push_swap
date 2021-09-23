@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_params_errors.c                              :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 14:25:26 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/22 14:27:18 by eel-orch         ###   ########.fr       */
+/*   Created: 2019/10/18 19:33:49 by eel-orch          #+#    #+#             */
+/*   Updated: 2019/11/09 19:10:21 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "srcs"
+#include "libft.h"
 
-
-//is integer
-//no duplicates
-
-int check_params_errors(int argc, char **str)
+void	*ft_calloc(size_t count, size_t size)
 {
-		int index;
+	unsigned char *ptr;
 
-		index = 0;
-		while (str[i])
-		{
-
-		}
+	ptr = malloc(count * size);
+	if (ptr)
+	{
+		ft_bzero(ptr, count * size);
+		return (ptr);
+	}
+	return (0);
 }

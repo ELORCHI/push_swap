@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_params_errors.c                              :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 14:25:26 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/22 14:27:18 by eel-orch         ###   ########.fr       */
+/*   Created: 2021/09/12 06:41:51 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/09/12 07:18:20 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "srcs"
+#include "libft.h"
 
-
-//is integer
-//no duplicates
-
-int check_params_errors(int argc, char **str)
+void ft_putstr(char *str)
 {
-		int index;
+	int i;
 
-		index = 0;
-		while (str[i])
-		{
-
-		}
+	if (!str)
+		return ;
+	i = 0;
+	while (*(str + i))
+	{
+		write(1, str + i, 1);
+		i++;
+	}
 }

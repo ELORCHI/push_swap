@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_params_errors.c                              :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 14:25:26 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/22 14:27:18 by eel-orch         ###   ########.fr       */
+/*   Created: 2019/10/12 12:49:44 by eel-orch          #+#    #+#             */
+/*   Updated: 2019/11/10 01:27:10 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "srcs"
+#include "libft.h"
 
-
-//is integer
-//no duplicates
-
-int check_params_errors(int argc, char **str)
+void	*ft_memset(void *b, int c, size_t len)
 {
-		int index;
+	size_t			index;
+	unsigned char	*ptr;
 
-		index = 0;
-		while (str[i])
-		{
-
-		}
+	ptr = b;
+	index = 0;
+	while (index < len)
+		ptr[index++] = (unsigned char)c;
+	return (b);
 }

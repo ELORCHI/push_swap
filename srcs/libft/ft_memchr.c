@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/12 07:20:53 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/12 07:22:10 by eel-orch         ###   ########.fr       */
+/*   Created: 2019/10/13 18:02:09 by eel-orch          #+#    #+#             */
+/*   Updated: 2019/11/10 01:26:51 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	write(fd, &c, 1);
-}
+	int					index;
+	const unsigned char	*src;
 
-void	ft_putnbr_fd(int n, int fd)
-{
-	int		help;
-	long	longn;
-
-	longn = (long)n;
-	if (longn < 0)
+	index = 0;
+	src = (const unsigned char *)s;
+	while (n--)
 	{
-		ft_putchar_fd('-', fd);
-		longn = -1 * longn;
+		if (src[index] == (unsigned char)c)
+			return ((unsigned char *)(s + index));
+		index++;
 	}
-	if (longn <= 9)
-		ft_putchar_fd(longn + 48, fd);
-	else
-	{
-		help = longn % 10;
-		ft_putnbr_fd(longn / 10, fd);
-		ft_putchar_fd(help + 48, fd);
-	}
+	return (NULL);
 }

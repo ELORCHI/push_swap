@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_params_errors.c                              :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 14:25:26 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/22 14:27:18 by eel-orch         ###   ########.fr       */
+/*   Created: 2019/10/10 10:34:10 by eel-orch          #+#    #+#             */
+/*   Updated: 2019/10/12 12:27:24 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "srcs"
-
-
-//is integer
-//no duplicates
-
-int check_params_errors(int argc, char **str)
+int	ft_isdigit(int c)
 {
-		int index;
-
-		index = 0;
-		while (str[i])
-		{
-
-		}
+	if (c >= 48 && c <= 57)
+		return (1);
+	else
+		return (0);
 }

@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_params_errors.c                              :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 14:25:26 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/22 14:27:18 by eel-orch         ###   ########.fr       */
+/*   Created: 2019/10/24 15:56:05 by eel-orch          #+#    #+#             */
+/*   Updated: 2019/11/04 03:17:12 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "srcs"
+#include "libft.h"
 
-
-//is integer
-//no duplicates
-
-int check_params_errors(int argc, char **str)
+void	ft_putendl_fd(char *s, int fd)
 {
-		int index;
-
-		index = 0;
-		while (str[i])
+	if (s != 0)
+	{
+		while (*s)
 		{
-
+			write(fd, s, 1);
+			s++;
 		}
+		write(fd, "\n", 1);
+	}
 }
