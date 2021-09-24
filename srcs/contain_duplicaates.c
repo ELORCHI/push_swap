@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_params_errors.c                              :+:      :+:    :+:   */
+/*   contain_duplicaates.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 14:25:26 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/24 07:28:23 by eel-orch         ###   ########.fr       */
+/*   Created: 2021/09/24 07:15:02 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/09/24 07:22:40 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs.h"
 
-int only_intergers(char **tab)
+int contain_duplicates(char **str, int len)
 {
 	int i;
 
-	i == 0;
-	if (tab == NULL)
-		return (-1);
-	while (tab[i])
+	i = 0;
+	while (i < len - 1)
 	{
-		if (ft_isint(tab[i]) == -1)
-			return (-1);
+		if (ft_strcmp(str[i], str[i + 1]) == 0)
+			return (0);
 		i++;
 	}
-	return (0);
+	return (-1);
 }
 
-int check_params_errors(int argc, char **str)
+int main(int argc, char **argv)
 {
-	if (only_intergers(tab) == -1)
-		return (-1);
-	sort_strings(str, argc);
-	if (contain_duplicates(str) == 0)
-		retrun (-1);
-	return (0);
+	int i;
+
+	i = contain_duplicates(argv, argc);
+	printf("%d", i);
 }

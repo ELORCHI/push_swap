@@ -1,39 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_params_errors.c                              :+:      :+:    :+:   */
+/*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 14:25:26 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/24 07:28:23 by eel-orch         ###   ########.fr       */
+/*   Created: 2021/09/24 07:12:33 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/09/24 07:27:51 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs.h"
 
-int only_intergers(char **tab)
+void	sort_strings(char **table, int tab_len)
 {
-	int i;
+	char	*tmp;
+	int		index;
+	int		j;
 
-	i == 0;
-	if (tab == NULL)
-		return (-1);
-	while (tab[i])
+	index = 1;
+	while (index < tab_len)
 	{
-		if (ft_isint(tab[i]) == -1)
-			return (-1);
-		i++;
+		j = index - 1;
+		tmp = table[index];
+		while (j >= 0 && (ft_strcmp(table[j], tmp) >= 0))
+		{
+			table[j + 1] = table[j];
+			j--;
+		}
+		table[j + 1] = tmp;
+		index++;
 	}
-	return (0);
-}
-
-int check_params_errors(int argc, char **str)
-{
-	if (only_intergers(tab) == -1)
-		return (-1);
-	sort_strings(str, argc);
-	if (contain_duplicates(str) == 0)
-		retrun (-1);
-	return (0);
 }
