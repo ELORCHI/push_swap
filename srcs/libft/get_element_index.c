@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort.c                                             :+:      :+:    :+:   */
+/*   get_element_index.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/24 07:12:33 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/24 09:56:05 by eel-orch         ###   ########.fr       */
+/*   Created: 2021/09/24 08:30:54 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/09/24 08:35:04 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "srcs.h"
+#include "libft.h"
 
-void	sort_strings(char **table, int tab_len)
+int get_element_index(char **tab, char *str)
 {
-	char	*tmp;
-	int		index;
-	int		j;
-	int		ta_len;
+	int i;
 
-	index = 1;
-	while (index < tab_len)
+	i = 0;
+	while (tab[i])
 	{
-		j = index - 1;
-		tmp = table[index];
-		while (j >= 0 && (ft_strcmp(table[j], tmp) >= 0))
-		{
-			table[j + 1] = table[j];
-			j--;
-		}
-		table[j + 1] = tmp;
-		index++;
+		if (ft_strcmp(tab[i], str) == 0)
+			return (i);
+		i++;
 	}
-}
+	return (-1);
+}	

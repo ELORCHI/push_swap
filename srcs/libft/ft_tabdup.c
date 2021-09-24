@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort.c                                             :+:      :+:    :+:   */
+/*   ft_tabdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/24 07:12:33 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/24 09:56:05 by eel-orch         ###   ########.fr       */
+/*   Created: 2021/09/24 08:21:02 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/09/24 08:23:08 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "srcs.h"
+#include "libft.h"
 
-void	sort_strings(char **table, int tab_len)
+char	**ft_tabdup(char **tab)
 {
-	char	*tmp;
-	int		index;
-	int		j;
-	int		ta_len;
+	char	**result;
+	int		len;
+	int		i;
 
-	index = 1;
-	while (index < tab_len)
+	len = ft_tablen(tab);
+	len++;
+	result = (char **)malloc(sizeof(char *) * len);
+	i = 0;
+	while (tab[i])
 	{
-		j = index - 1;
-		tmp = table[index];
-		while (j >= 0 && (ft_strcmp(table[j], tmp) >= 0))
-		{
-			table[j + 1] = table[j];
-			j--;
-		}
-		table[j + 1] = tmp;
-		index++;
+		result[i] = ft_strdup(tab[i]);
+		i++;
 	}
+	result[i] = NULL;
+	return (result);
 }

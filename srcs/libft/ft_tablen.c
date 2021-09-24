@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort.c                                             :+:      :+:    :+:   */
+/*   ft_tablen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/24 07:12:33 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/24 09:56:05 by eel-orch         ###   ########.fr       */
+/*   Created: 2021/09/24 08:21:56 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/09/24 08:24:16 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "srcs.h"
+#include "libft.h"
 
-void	sort_strings(char **table, int tab_len)
+int	ft_tablen(char **tab)
 {
-	char	*tmp;
-	int		index;
-	int		j;
-	int		ta_len;
+	int	len;
 
-	index = 1;
-	while (index < tab_len)
-	{
-		j = index - 1;
-		tmp = table[index];
-		while (j >= 0 && (ft_strcmp(table[j], tmp) >= 0))
-		{
-			table[j + 1] = table[j];
-			j--;
-		}
-		table[j + 1] = tmp;
-		index++;
-	}
+	len = 0;
+	if (tab == NULL)
+		return (0);
+	while (tab[len] != NULL)
+		len++;
+	return (len);
 }
