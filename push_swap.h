@@ -1,41 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_a_b.c                                         :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 12:18:36 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/24 08:49:56 by eel-orch         ###   ########.fr       */
+/*   Created: 2021/09/24 07:30:29 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/09/24 07:32:02 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-void push_a_b(t_stack **a, t_stack **b, int id)
-{
-	t_stack **from;
-	t_stack **to;
-	t_stack *tmp;
-	char 	*str;
+# include "operations/operations.h"
+# include "stack/stack.h"
 
-	if (id == STACK_A)
-	{
-		from = a;
-		to = b;
-		str = ft_strdup("pb");
-	}
-	else
-	{
-		from = b;
-		to = a;
-		str = ft_strdup("pa");
-	}
-	if (*from == NULL)
-		return ;
-	tmp = copy_node(*from);
-	pop(from);
-	push(to, tmp);
-	ft_putstr(str);
-	free(str);
-}
+#endif

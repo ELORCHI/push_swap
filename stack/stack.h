@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 05:58:38 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/22 14:22:18 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/24 08:48:44 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include "../srcs/libft/libft.h"
 
 # define STACK_A 0
 # define STACK_B 1
