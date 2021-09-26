@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations.h                                       :+:      :+:    :+:   */
+/*   top_index.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 12:50:00 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/26 09:34:31 by eel-orch         ###   ########.fr       */
+/*   Created: 2021/09/26 09:26:15 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/09/26 09:27:09 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OPERATIONS_H
-# define OPERATIONS_H
+#include "stack.h"
 
-#include "../stack/stack.h"
-
-void swap(t_stack **stack, int id);
-void rotate(t_stack **stack, int id);
-void rotation(t_stack **a, t_stack **b, int id);
-void rrotate(t_stack **stack, int id);
-void rev_rotation(t_stack **a, t_stack **b, int id);
-
-#endif
+int top_index(t_stack *a)
+{
+	if (a == NULL)
+		return (-1);
+	return (a->index);
+}
