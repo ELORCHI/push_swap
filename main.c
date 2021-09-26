@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 11:36:01 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/24 11:14:20 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/26 10:45:01 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,18 @@ int main(int argc, char **argv)
 	char	**tab;
 
 	a = NULL;
-	tab = ft_rmstr(0, argv);
+	tab = ft_rmstr(argv, 0);
 	if (check_params_errors(argc - 1, tab) == -1)
 	{
 		ft_putstr("ERROR\n");
 		return (0);
 	}
-	a = index_and_fill(&a, tab, argc -1);
-	push_swap(&a);
+	index_and_fill(&a, tab, argc -1);
+//	while (a)
+//	{
+//		printf("%d\n", a->index);
+//		a = a->next;
+//	}
+//	push_swap(&a);
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 07:42:29 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/24 10:22:05 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/26 10:44:59 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,4 @@ void	index_and_fill(t_stack **stack, char **tab, int argc)
 		push(stack, tmp);
 		i++;
 	}
-}
-
-int main(int argc, char **argv)
-{
-	t_stack *stack;
-	char **tab;
-
-	tab = ft_rmstr(argv, 0);
-	stack = NULL;
-	index_and_fill(&stack, tab, argc - 1);
-	display_stack(stack, STACK_A);
 }

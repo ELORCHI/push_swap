@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 07:15:02 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/24 07:22:40 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/26 10:35:46 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,4 @@ int contain_duplicates(char **str, int len)
 		i++;
 	}
 	return (-1);
-}
-
-int main(int argc, char **argv)
-{
-	int i;
-
-	i = contain_duplicates(argv, argc);
-	printf("%d", i);
 }
