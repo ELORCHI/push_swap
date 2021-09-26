@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 07:13:07 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/24 07:43:39 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/26 09:41:05 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include "libft/libft.h"
 # include "../stack/stack.h"
+# include "../operations/operations.h"
+
 int		contain_duplicates(char **str, int len);
 void	sort_strings(char **table, int tab_len);
+int		max(t_stack *a);
 #endif
