@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 12:18:36 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/24 08:49:56 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/27 11:07:47 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ void push_a_b(t_stack **a, t_stack **b, int id)
 	{
 		from = a;
 		to = b;
-		str = ft_strdup("pb");
+		str = ft_strdup("pb\n");
 	}
 	else
 	{
 		from = b;
 		to = a;
-		str = ft_strdup("pa");
+		str = ft_strdup("pa\n");
 	}
 	if (*from == NULL)
 		return ;

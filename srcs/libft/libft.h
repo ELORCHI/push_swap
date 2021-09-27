@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/19 19:09:00 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/27 07:59:54 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/27 09:31:34 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
@@ -53,7 +54,9 @@ int		ft_toupper(int c);
 int		ft_strcmp(const char *first, const char *second);
 char	**ft_tabdup(char **tab);
 int		ft_tablen(char **tab);
-int		get_element_index(char **tab, char *str);
+int		get_element_index(int *tab, int str, int argc);
 char	**ft_rmstr(char **tab, int index);
-void	ft_free(char **tab;)
+void	ft_free(char **tab);
+int		*string_to_int(char **table, int tab_len);
+
 #endif

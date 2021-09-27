@@ -6,15 +6,15 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 07:12:33 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/24 09:56:05 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/27 09:17:42 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs.h"
 
-void	sort_strings(char **table, int tab_len)
+void	sort(int *table, int tab_len)
 {
-	char	*tmp;
+	int		key;
 	int		index;
 	int		j;
 	int		ta_len;
@@ -23,13 +23,13 @@ void	sort_strings(char **table, int tab_len)
 	while (index < tab_len)
 	{
 		j = index - 1;
-		tmp = table[index];
-		while (j >= 0 && (ft_strcmp(table[j], tmp) >= 0))
+		key = table[index];
+		while (j >= 0 && (table[j] > key))
 		{
 			table[j + 1] = table[j];
 			j--;
 		}
-		table[j + 1] = tmp;
+		table[j + 1] = key;
 		index++;
 	}
 }

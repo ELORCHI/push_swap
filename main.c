@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 11:36:01 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/26 10:45:01 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/27 11:39:09 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,6 @@ int main(int argc, char **argv)
 		return (0);
 	}
 	index_and_fill(&a, tab, argc -1);
-//	while (a)
-//	{
-//		printf("%d\n", a->index);
-//		a = a->next;
-//	}
-//	push_swap(&a);
+	push_swap(&a, argc - 1);
 	return 0;
 }

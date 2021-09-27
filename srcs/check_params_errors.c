@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 14:25:26 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/26 16:15:10 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/27 11:33:07 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,18 +35,21 @@ int only_intergers(char **tab)
 int check_params_errors(int argc, char **str)
 {
 	char **tmp;
+	int *tab;;
 
 	tmp = ft_tabdup(str);
 	if (only_intergers(tmp) == -1)
 	{
-		//free;
+		ft_free(tmp);
 		return (-1);
 	}
-	sort_strings(tmp, argc);
-	if (contain_duplicates(tmp, argc) == 0)
+	tab = string_to_int(str, argc);
+	sort(tab, argc);
+	if (contain_duplicates(tab, argc) == 0)
 	{
-		//free
+		free(tab);
 		return (-1);
 	}
+	free(tab);
 	return (0);
 }

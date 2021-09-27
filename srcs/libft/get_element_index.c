@@ -6,20 +6,20 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 08:30:54 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/26 10:42:00 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/27 09:59:05 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int get_element_index(char **tab, char *str)
+int get_element_index(int *tab, int str, int argc)
 {
 	int i;
 
 	i = 0;
-	while (tab[i])
+	while (i < argc)
 	{
-		if (ft_strcmp(tab[i], str) == 0)
+		if (tab[i] == str)
 			return (i);
 		i++;
 	}
