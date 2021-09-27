@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 14:25:26 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/27 11:33:07 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/27 14:54:20 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int check_params_errors(int argc, char **str)
 		ft_free(tmp);
 		return (-1);
 	}
+	ft_free(tmp);
 	tab = string_to_int(str, argc);
 	sort(tab, argc);
 	if (contain_duplicates(tab, argc) == 0)

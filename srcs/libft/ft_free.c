@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 07:57:43 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/27 08:04:32 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/27 14:52:22 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ void	ft_free(char **tab)
 	if (tab == NULL)
 		return ;
 	while (tab[i] != NULL)
+	{
 		free(tab[i]);
+		i++;
+	}
 	free(tab);
 }

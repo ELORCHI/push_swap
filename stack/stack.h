@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 05:58:38 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/26 09:34:14 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/27 14:18:58 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void 	pop(t_stack **stack);
 void	push_back(t_stack **stack, t_stack *new);
 void 	pop_back(t_stack **stack);
 void	push_a_b(t_stack **a, t_stack **b, int id);
+void	free_stack(t_stack *stack);
 int		stack_len(t_stack *stack);
 int		top_index(t_stack *a);
 t_stack *last_node(t_stack *stack);
