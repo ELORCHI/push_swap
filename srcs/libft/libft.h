@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/19 19:09:00 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/26 10:30:47 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/27 07:59:54 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,5 @@ char	**ft_tabdup(char **tab);
 int		ft_tablen(char **tab);
 int		get_element_index(char **tab, char *str);
 char	**ft_rmstr(char **tab, int index);
+void	ft_free(char **tab;)
 #endif
