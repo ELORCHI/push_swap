@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 08:11:05 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/27 11:11:30 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/27 12:36:42 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,17 @@ void push_swap(t_stack **a, int size)
 	while (i < max_bits)
 	{
 		j = 0;
+	//printf("***********************************\n");
 		while (j < size)
 		{
-			if (((*a)->index >> 1) & 1)
-			{
+//			printf("************************************\n");
+			if ((((*a)->index) >> i) & 1)
 				rotate(a, STACK_A);
-				printf("ra\n");
-			}
 			else
+			{
+				//printf("value %d : %d\n", (*a)->index, (*a)->data);
 				push_a_b(a, &b, STACK_A);
+			}
 			j++;
 		}
 		while (b != NULL)
