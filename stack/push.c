@@ -6,20 +6,20 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 06:05:25 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/24 08:36:22 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 12:58:47 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-void push(t_stack **stack, t_stack *new)
+void	push(t_stack **stack, t_stack *new)
 {
 	if (stack == NULL)
 		return ;
 	if (*stack != NULL)
 	{
 		new->next = *stack;
-		*stack = new;	
+		*stack = new;
 		return ;
 	}
 	*stack = new;

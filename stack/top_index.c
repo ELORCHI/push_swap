@@ -6,13 +6,13 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 09:26:15 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/26 09:27:09 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 12:59:37 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-int top_index(t_stack *a)
+int	top_index(t_stack *a)
 {
 	if (a == NULL)
 		return (-1);

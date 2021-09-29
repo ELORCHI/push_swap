@@ -6,15 +6,15 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 11:47:53 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/22 11:47:54 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 12:58:10 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-void pop_back(t_stack **stack)
+void	pop_back(t_stack **stack)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 	t_stack	*to_free;
 
 	if (stack == NULL || *stack == NULL)
@@ -29,5 +29,5 @@ void pop_back(t_stack **stack)
 		tmp = tmp->next;
 	to_free = tmp->next;
 	tmp->next = NULL;
-	free(to_free);	
+	free(to_free);
 }

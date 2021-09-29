@@ -6,18 +6,18 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 12:18:36 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/27 11:07:47 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 12:53:15 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-void push_a_b(t_stack **a, t_stack **b, int id)
+void	push_a_b(t_stack **a, t_stack **b, int id)
 {
-	t_stack **from;
-	t_stack **to;
-	t_stack *tmp;
-	char 	*str;
+	t_stack	**from;
+	t_stack	**to;
+	t_stack	*tmp;
+	char	*str;
 
 	if (id == STACK_A)
 	{

@@ -6,15 +6,15 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 11:57:44 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/27 12:36:17 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 12:53:37 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-t_stack *copy_node(t_stack *srcs)
+t_stack	*copy_node(t_stack *srcs)
 {
-	t_stack *copy;
+	t_stack	*copy;
 
 	copy = (t_stack *)malloc(sizeof(t_stack));
 	if (copy)
