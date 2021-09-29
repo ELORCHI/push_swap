@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/19 02:10:26 by eel-orch          #+#    #+#             */
-/*   Updated: 2019/11/10 01:34:14 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 11:48:28 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	size_t				index;
 	unsigned char		*ptr;
-	unsigned const char *s;
+	unsigned const char	*s;
 
 	index = -1;
 	ptr = (unsigned char *)dest;

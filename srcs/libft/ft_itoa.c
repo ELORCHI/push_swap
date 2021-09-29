@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 16:39:40 by eel-orch          #+#    #+#             */
-/*   Updated: 2019/11/04 19:24:13 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 11:45:00 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	fcount(long d)
 {
-	int count;
+	int	count;
 
 	count = 1;
 	while (d / 10 != 0)
@@ -27,8 +27,8 @@ static int	fcount(long d)
 
 static char	*remp(char *tab, long integer, int sign, int len)
 {
-	int loop;
-	int i;
+	int	loop;
+	int	i;
 
 	loop = len;
 	i = len;
@@ -46,7 +46,7 @@ static char	*remp(char *tab, long integer, int sign, int len)
 	return (tab);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int		count;
 	int		index;

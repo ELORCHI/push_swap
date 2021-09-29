@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 22:25:56 by eel-orch          #+#    #+#             */
-/*   Updated: 2019/11/09 19:35:19 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 11:52:18 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *first, const char *second, size_t n)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (n-- && (first[i] != '\0' || second[i] != '\0'))

@@ -6,15 +6,15 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 06:41:51 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/12 07:18:20 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 11:36:38 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
-	int i;
+	int	i;
 
 	if (!str)
 		return ;

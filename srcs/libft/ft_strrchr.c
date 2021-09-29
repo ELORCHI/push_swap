@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 20:00:48 by eel-orch          #+#    #+#             */
-/*   Updated: 2019/11/10 01:25:22 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 11:53:03 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *string, int c)
 {
-	int index;
+	int	index;
 
 	index = 0;
 	while (string[index])

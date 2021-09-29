@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 15:58:56 by eel-orch          #+#    #+#             */
-/*   Updated: 2019/11/09 21:39:37 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 11:48:45 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char *tab;
-	unsigned char *ptr;
+	unsigned char	*tab;
+	unsigned char	*ptr;
 
 	tab = (unsigned char *)src;
 	ptr = (unsigned char *)dst;

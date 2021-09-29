@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 17:40:47 by eel-orch          #+#    #+#             */
-/*   Updated: 2019/10/27 16:57:42 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 11:52:02 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 size_t	ft_strlen(const char *str)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
+	if (str == NULL)
+		return (0);
 	while (str[i] != '\0')
 		i++;
 	return (i);

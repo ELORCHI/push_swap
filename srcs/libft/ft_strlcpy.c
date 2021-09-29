@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 23:16:16 by eel-orch          #+#    #+#             */
-/*   Updated: 2019/11/10 01:24:23 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 11:43:12 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 {
-	size_t index;
+	size_t	index;
 
 	index = 0;
 	if (n == 0)

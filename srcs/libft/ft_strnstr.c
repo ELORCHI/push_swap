@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 01:32:48 by eel-orch          #+#    #+#             */
-/*   Updated: 2019/11/10 02:01:29 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 11:38:54 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strnstr(const char *fulls, const char *subs, size_t len)
 {
-	size_t index;
-	size_t j;
-	size_t t;
+	size_t	index;
+	size_t	j;
+	size_t	t;
 
 	j = 0;
 	if (*subs == 0)

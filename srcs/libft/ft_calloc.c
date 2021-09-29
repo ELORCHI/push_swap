@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 19:33:49 by eel-orch          #+#    #+#             */
-/*   Updated: 2019/11/09 19:10:21 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 11:49:42 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char *ptr;
+	unsigned char	*ptr;
 
 	ptr = malloc(count * size);
 	if (ptr)

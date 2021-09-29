@@ -6,14 +6,14 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 09:23:33 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/27 11:25:50 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 11:37:06 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-char **ft_rmstr(char **tab, int index)
+char	**ft_rmstr(char **tab, int index)
 {
 	char	**new;
 	int		i;
