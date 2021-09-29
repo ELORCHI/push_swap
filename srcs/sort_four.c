@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 13:15:27 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/29 13:16:34 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 16:13:21 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	sort_four(t_stack **a, t_stack **b)
 	int		position;
 
 	push_a_b(a, b, STACK_A);
-	sort_three(a, b);
+	sort_three(a);
 	push_a_b(a, b, STACK_B);
 	tmp = (*a)->next;
 	position = 0;
