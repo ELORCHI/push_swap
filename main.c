@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 11:36:01 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/29 13:06:59 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 14:14:03 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,7 @@ int	main(int argc, char **argv)
 	else
 		push_swap(&a, argc - 1);
 	free_stack(a);
+	while (1)
+		;
 	return (0);
 }

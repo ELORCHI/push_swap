@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 10:30:18 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/29 11:42:36 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 14:13:31 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ int	ft_isint(char *str)
 	int		i;
 	int		num;
 	char	*str_num;
+	int		t;
 
 	i = 0;
+	t = 0;
 	if (str[0] == '-' || str[0] == '+')
 		i = 1;
 	while (str[i])
@@ -30,11 +32,12 @@ int	ft_isint(char *str)
 	}
 	num = ft_atoi(str);
 	str_num = ft_itoa(num);
-	if (ft_strcmp(str, str_num) != 0)
-	{
-		free(str_num);
-		return (-1);
-	}
+	if (str[0] == '+' || (str[0] == '-' && str[1] == '0'))
+		t = 1;
+	if (ft_strcmp(str + t, str_num) != 0)
+		t = -1;
+	else
+		t = 0;
 	free(str_num);
-	return (0);
+	return (t);
 }
