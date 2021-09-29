@@ -18,10 +18,14 @@
 # include "../operations/operations.h"
 # include <stdio.h>
 
-void	sort(int *table, int tab_len);
-void	index_and_fill(t_stack **stack, char **tab, int argc);
 int		contain_duplicates(int *tab, int len);
 int		max(t_stack *a);
 int		check_params_errors(int argc, char **str);
 void	push_swap(t_stack **a, int size);
+void	sort_three(t_stack **a, t_stack **b);
+void	sort_four(t_stack **a, t_stack **b);
+void	mini_sort(t_stack **a, int argc);
+void	sort_five(t_stack **a, t_stack **b);
+void	sort(int *table, int tab_len);
+void	index_and_fill(t_stack **stack, char **tab, int argc);
 #endif

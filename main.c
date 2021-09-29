@@ -23,13 +23,10 @@ int main(int argc, char **argv)
 		return (0);
 	}
 	index_and_fill(&a, argv + 1, argc -1);
-//	if (argc - 1 <= 3)
-//		return (swap_three());
-//	else if (argc - 1 == 4)
-//		return (swap_four());
-//	else if (argc - 1 == 5);
-//		return (swap_five());
-	push_swap(&a, argc - 1);
+	if (argc -1 <= 5)
+		mini_sort(&a, argc - 1);
+	else
+		push_swap(&a, argc - 1);
 	display_stack(a, STACK_A);
 	free_stack(a);
 	return 0;
