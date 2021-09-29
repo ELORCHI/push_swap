@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   swap.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/29 13:03:45 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/09/29 13:04:03 by eel-orch         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "operations.h"
 
-void swap(t_stack **stack, int id)
+void	swap(t_stack **stack, int id)
 {
-	int tmp;
+	int	tmp;
 
 	if (stack == NULL || *stack == NULL)
 		return ;

@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rotation.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/29 13:02:59 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/09/29 13:03:08 by eel-orch         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "operations.h"
 
-void rotation(t_stack **a, t_stack **b, int id)
+void	rotation(t_stack **a, t_stack **b, int id)
 {
 	if (id == STACK_A)
 		rotate(a, STACK_A);

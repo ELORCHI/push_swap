@@ -6,15 +6,15 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 11:45:44 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/27 12:14:00 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 13:02:49 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "operations.h"
 
-void rotate(t_stack **stack, int id)
+void	rotate(t_stack **stack, int id)
 {
-	t_stack *head;
+	t_stack	*head;
 
 	if (stack_len(*stack) <= 1)
 		return ;
@@ -26,4 +26,3 @@ void rotate(t_stack **stack, int id)
 	else if (id == STACK_B)
 		ft_putstr("rb\n");
 }
-
