@@ -2,8 +2,6 @@
 
 void sort_three(t_stack **a, t_stack **b)
 {
-	int	i;
-
 	write(2, "hello from sort three\n", ft_strlen("hello from sort three\n"));
 	push_a_b(a, b, STACK_A);
 	if ((*a)->data > (*a)->next->data)

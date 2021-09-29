@@ -10,6 +10,7 @@ void sort_five(t_stack **a, t_stack **b)
 	push_a_b(a, b, STACK_A);
 	sort_four(a, b);
 	tmp = (*a)->next;
+	position = 0;
 	while (tmp && tmp->index < (*a)->index)
 	{
 		tmp = tmp->next;
@@ -36,8 +37,3 @@ void sort_five(t_stack **a, t_stack **b)
 		rev_rotation(a, b, STACK_A);
 	}
 }
-// i;
-// j;
-// k;
-// l;
-// m;

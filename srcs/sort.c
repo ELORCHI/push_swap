@@ -17,7 +17,6 @@ void	sort(int *table, int tab_len)
 	int		key;
 	int		index;
 	int		j;
-	int		ta_len;
 
 	index = 1;
 	while (index < tab_len)
