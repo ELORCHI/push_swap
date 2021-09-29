@@ -6,15 +6,15 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 08:13:56 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/27 10:23:55 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 13:27:33 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs.h"
 
-int max(t_stack *a)
+int	max(t_stack *a)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 	int		max;
 
 	if (a == NULL)

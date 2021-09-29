@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 06:16:20 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/29 12:55:13 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 13:11:13 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ void	display_stack(t_stack *stack, int id)
 		write(1, "\n", 1);
 		tmp = tmp->next;
 	}
-	else
+	if (stack == NULL)
 		ft_putstr("stack is empty\n");
 }

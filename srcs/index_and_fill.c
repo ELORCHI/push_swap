@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 07:42:29 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/27 14:43:55 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 13:27:18 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	index_and_fill(t_stack **stack, char **tab, int argc)
 {
-	t_stack *tmp;
-	int 	i;
+	t_stack	*tmp;
+	int		i;
 	int		index;
 	int		*copy;
 	int		decimal;

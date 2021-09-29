@@ -6,15 +6,15 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 07:15:02 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/27 11:33:50 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 13:26:46 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs.h"
 
-int contain_duplicates(int *tab, int len)
+int	contain_duplicates(int *tab, int len)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < len - 1)

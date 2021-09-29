@@ -1,12 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_five.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/29 13:16:47 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/09/29 13:27:59 by eel-orch         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "srcs.h"
 
-void sort_five(t_stack **a, t_stack **b)
+void	helper(t_stack **a, t_stack **b, int position)
 {
-    t_stack *tmp;
-	int 	position;
+	if (position == 3)
+	{
+		rev_rotation(a, b, STACK_A);
+		swap(a, STACK_A);
+		rotate(a, STACK_A);
+		rotate(a, STACK_A);
+		return ;
+	}
+	if (position == 2)
+	{
+		push_a_b(a, b, STACK_A);
+		rotate(a, STACK_A);
+		rotate(a, STACK_A);
+		push_a_b(a, b, STACK_B);
+		rev_rotation(a, b, STACK_A);
+		rev_rotation(a, b, STACK_A);
+	}
+}
 
+void	sort_five(t_stack **a, t_stack **b)
+{
+	t_stack	*tmp;
+	int		position;
 
-	write(2, "hello from sort four\n", ft_strlen("hello from sort four\n"));
 	push_a_b(a, b, STACK_A);
 	sort_four(a, b);
 	tmp = (*a)->next;
@@ -20,20 +51,6 @@ void sort_five(t_stack **a, t_stack **b)
 		swap(a, STACK_A);
 	else if (position == 4)
 		rotate(a, STACK_A);
-	else if (position == 3)
-	{
-		rev_rotation(a, b, STACK_A);
-		swap(a, STACK_A);
-		rotate(a, STACK_A);
-		rotate(a, STACK_A);
-	}
-	else if (position == 2)
-	{
-		push_a_b(a, b, STACK_A);
-		rotate(a, STACK_A);
-		rotate(a, STACK_A);
-		push_a_b(a, b, STACK_B);
-		rev_rotation(a, b, STACK_A);
-		rev_rotation(a, b, STACK_A);
-	}
+	else
+		helper(a, b, position);
 }

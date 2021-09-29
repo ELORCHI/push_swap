@@ -1,15 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_four.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/29 13:15:27 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/09/29 13:16:34 by eel-orch         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "srcs.h"
 
-void sort_four(t_stack **a, t_stack **b)
+void	sort_four(t_stack **a, t_stack **b)
 {
-    t_stack *tmp;
-    int		position;
+	t_stack	*tmp;
+	int		position;
 
-	write(2, "hello from sort four\n", ft_strlen("hello from sort four\n"));
-    push_a_b(a, b, STACK_A);
-    sort_three(a, b);
-    push_a_b(a, b, STACK_B);
-    tmp = (*a)->next;
+	push_a_b(a, b, STACK_A);
+	sort_three(a, b);
+	push_a_b(a, b, STACK_B);
+	tmp = (*a)->next;
 	position = 0;
 	while (tmp && tmp->index < (*a)->index)
 	{

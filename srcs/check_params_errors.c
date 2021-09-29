@@ -6,15 +6,15 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 14:25:26 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/27 14:54:20 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 13:26:31 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs.h"
 
-int only_intergers(char **tab)
+int	only_intergers(char **tab)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (tab == NULL)
@@ -28,10 +28,10 @@ int only_intergers(char **tab)
 	return (0);
 }
 
-int check_params_errors(int argc, char **str)
+int	check_params_errors(int argc, char **str)
 {
-	char **tmp;
-	int *tab;;
+	char	**tmp;
+	int		*tab;
 
 	tmp = ft_tabdup(str);
 	if (only_intergers(tmp) == -1)
