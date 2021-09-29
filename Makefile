@@ -16,7 +16,7 @@ all : $(NAME)
 $(NAME):
 		make -C srcs/libft/
 		make clean -C srcs/libft/
-		gcc -Wall -Werror -Wextra $(SRCS) $(LIBFT) -o $(NAME)
+		gcc -Wall -Werror -Wextra -g -fsanitize=address $(SRCS) $(LIBFT) -o $(NAME)
 
 clean:
 		make clean -C srcs/libft/

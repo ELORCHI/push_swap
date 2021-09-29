@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 10:30:18 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/26 10:30:49 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/09/29 11:21:42 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int ft_isint(char *str)
 		char *str_num;
 
 		i = 0;
+		if (str[0] == '-' || str[0] == '+')
+			i = 1;
 		while (str[i])
 		{
 				if (ft_isdigit((int)str[i]) == 0)

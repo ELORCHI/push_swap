@@ -15,17 +15,13 @@
 int only_intergers(char **tab)
 {
 	int i;
-	int t;
 
 	i = 0;
 	if (tab == NULL)
 		return (-1);
 	while (tab[i])
 	{
-		t = 0;
-		if (tab[i][0] == '-' ||  tab[i][0] == '+')
-			t = 1;
-		if (ft_isint(tab[i] + t) == -1)
+		if (ft_isint(tab[i]) == -1)
 			return (-1);
 		i++;
 	}
