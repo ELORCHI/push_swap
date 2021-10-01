@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 13:25:21 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/29 13:28:24 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/01 16:34:37 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	is_sorted(t_stack *stack)
 	t_stack	*tmp;
 
 	tmp = stack;
+	if (stack == NULL)
+		return (0);
 	if (tmp->next == NULL)
 		return (0);
 	while (tmp->next)

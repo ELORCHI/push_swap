@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 11:36:01 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/01 15:07:28 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/01 16:35:14 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,13 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	index_and_fill(&a, argv + 1, argc - 1);
-	if (argc - 1 <= 5)
-		mini_sort(&a, argc - 1);
-	else
-		push_swap(&a, argc - 1);
-	//display_stack(a, STACK_A);
+	if (is_sorted(a) == -1)
+	{
+		if (argc - 1 <= 5)
+			mini_sort(&a, argc - 1);
+		else
+			push_swap(&a, argc - 1);
+	}
 	free_stack(a);
 	return (0);
 }

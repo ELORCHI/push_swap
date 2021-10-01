@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 07:13:07 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/01 15:24:30 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/01 16:23:09 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 # include "../operations/operations.h"
 # include <stdio.h>
 
-int max_data(t_stack *a);
+int		is_sorted(t_stack *stack);
+int		max_data(t_stack *a);
 int		node_position(t_stack *stack, t_stack *node);
 int		contain_duplicates(int *tab, int len);
 int		max(t_stack *a);
