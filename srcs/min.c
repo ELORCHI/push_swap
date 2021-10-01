@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_five.c                                        :+:      :+:    :+:   */
+/*   min.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/29 13:16:47 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/01 16:04:46 by eel-orch         ###   ########.fr       */
+/*   Created: 2021/10/01 14:12:06 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/10/01 15:52:32 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs.h"
 
-void	sort_five(t_stack **a, t_stack **b)
+t_stack	*min(t_stack *stack)
 {
-	t_stack *m;
-	int 	position;
+	t_stack	*tmp;
+	t_stack	*min;
 
-	m = min(*a);
-	position = node_position(*a, m);
-	if (position <= 2)
+	min = stack;
+	tmp = stack->next;
+	while (tmp)
 	{
-		while (position--)
-			rotate(a, STACK_A);
+		if (tmp->data < min->data)
+			min = tmp;
+		tmp = tmp->next;
 	}
-	else
-	{
-		while (position < 5)
-		{
-			rrotate(a, STACK_A);
-			position++;
-		}
-	}
-	push_a_b(a, b, STACK_A);
-	sort_four(a, b);
-	push_a_b(a, b, STACK_B);
-	//display_stack(*a, STACK_A);
+	return (min);
 }

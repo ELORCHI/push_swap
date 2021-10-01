@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.h                                             :+:      :+:    :+:   */
+/*   max_data.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/30 10:54:40 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/09/30 12:56:01 by eel-orch         ###   ########.fr       */
+/*   Created: 2021/10/01 15:22:07 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/10/01 16:06:38 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MAIN_H
-# define MAIN_H
+#include "srcs.h"
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-
-typedef struct s_gr
+int	max_data(t_stack *a)
 {
-	int width;
-	int height;
-	char char_gr;
-	char **back;
-}			t_gr;
+	int		i;
+	t_stack	*tmp;
 
-typedef struct s_rec
-{
-	float x;
-	float y;
-	float width;
-	float height;
-	char rec_c;
-	char empty;
-}			t_rec;
-#endif 
+	i = a->data;
+	tmp = a->next;
+	while (tmp)
+	{
+		if (tmp->data > i)
+			i = tmp->data;
+		tmp = tmp->next;
+	}
+	return (i);
+}
